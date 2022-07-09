@@ -21,21 +21,20 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	i = 0;
 	while (dest[a] != '\0')
 		a++;
-	while (nb < a && src[i] != '\0')
-		{
-			dest[a] = src[i];
-			a++;
-			i++;
-		}
-		dest[a] = '\0';
+	while (i < nb  && src[i] != '\0')
+	{
+		dest[a] = src[i];
+		a++;
+		i++;
 	}
+	dest[a] = '\0';
 	return (dest);
 }
-int	main()
+/*int	main()
 {
 	char dest[] = "esta ";
 	char src[] = "string";
 
-	ft_strncat(dest, src, 8);
+	ft_strncat(dest, src, 4);
 	printf("%s\n", dest);
-}
+}*/
